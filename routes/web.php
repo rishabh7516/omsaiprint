@@ -17,7 +17,8 @@ Route::get('/gallery', function () {
 use App\Http\Controllers\IndustryController;
 
 Route::get('/industries', [IndustryController::class, 'index'])->name('industries.index');
-Route::get('/industries/{slug}', [IndustryController::class, 'show'])->name('industries.show');
+Route::get('/industries/{sectorSlug}', [IndustryController::class, 'show'])->name('industries.show');
+Route::get('/industries/{sectorSlug}/{productSlug}', [IndustryController::class, 'product'])->name('industries.product');
 
 Route::get('/quality', function () {
     return view('quality');

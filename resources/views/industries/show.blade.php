@@ -26,10 +26,10 @@
                         <span class="text-[11px] font-bold text-brandOrange uppercase tracking-wider block mb-1">{{ $product['specs'] }}</span>
                         <h3 class="text-xl font-bold text-navy mb-2">{{ $product['name'] }}</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">{{ $product['description'] }}</p>
-                        <a href="{{ url('/#quote') }}" class="inline-flex items-center text-xs font-bold text-navy hover:text-brandOrange transition space-x-1">
-                            <span>Request Quote for this Product</span>
-                            <span>&rarr;</span>
-                        </a>
+                      <a href="{{ route('industries.product', ['sectorSlug' => $sectorSlug, 'productSlug' => $productKey]) }}" class="inline-flex items-center text-xs font-bold text-navy hover:text-brandOrange transition space-x-1">
+    <span>View Product Details</span>
+    <span>&rarr;</span>
+</a>
                     </div>
                 </div>
             @endforeach
