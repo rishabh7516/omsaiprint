@@ -37,7 +37,10 @@
                 <a href="{{ url('/') }}" class="hover:text-navy transition pb-1 {{ Request::is('/') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Home</a>
                 <a href="{{ url('/the-machine') }}" class="hover:text-navy transition pb-1 {{ Request::is('the-machine') ? 'text-navy border-b-2 border-brandOrange' : '' }}">The Machine</a>
                 <a href="{{ url('/gallery') }}" class="hover:text-navy transition pb-1 {{ Request::is('gallery') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Gallery</a>
-                <a href="{{ url('/industries') }}" class="hover:text-navy transition pb-1 {{ Request::is('industries') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Industries</a>
+               <a href="{{ route('industries.index') }}" 
+   class="text-xs font-medium transition pb-1 {{ request()->is('industries*') ? 'text-brandOrange border-b-2 border-brandOrange font-bold' : 'text-slate-600 hover:text-navy' }}">
+    Industries
+</a>
                 <a href="{{ url('/quality') }}" class="hover:text-navy transition pb-1 {{ Request::is('quality') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Quality</a>
                 <a href="{{ url('/about') }}" class="hover:text-navy transition pb-1 {{ Request::is('about') ? 'text-navy border-b-2 border-brandOrange' : '' }}">About</a>
                 <a href="{{ url('/contact') }}" class="hover:text-navy transition pb-1 {{ Request::is('contact') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Contact</a>
@@ -68,7 +71,10 @@
                     <li><a href="{{ url('/') }}" class="hover:underline">Home</a></li>
                     <li><a href="{{ url('/the-machine') }}" class="hover:underline">The Machine</a></li>
                     <li><a href="{{ url('/gallery') }}" class="hover:underline">Gallery</a></li>
-                    <li><a href="{{ url('/industries') }}" class="hover:underline">Industries</a></li>
+                    <li><a href="{{ route('industries.index') }}" 
+   class="text-xs font-medium transition pb-1 {{ request()->is('industries*') ? 'text-brandOrange border-b-2 border-brandOrange font-bold' : 'text-slate-600 hover:text-navy' }}">
+    Industries
+</a></li>
                     <li><a href="{{ url('/quality') }}" class="hover:underline">Quality</a></li>
                     <li><a href="{{ url('/about') }}" class="hover:underline">About</a></li>
                 </ul>
