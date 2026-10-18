@@ -22,83 +22,162 @@
 </head>
 <body class="bg-pageBg text-slate-700 font-sans antialiased" x-data="{ quoteModalOpen: false }">
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center font-bold text-navy text-xs">OSP</div>
-                <div>
-                    <a href="{{ url('/') }}" class="font-extrabold tracking-wide uppercase text-navy text-sm block">Om Sai Print</a>
-                    <p class="text-[10px] tracking-wider uppercase text-slate-500 font-semibold">Silk-Screen Bottle Printing</p>
-                </div>
-            </div>
+<!-- Header Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm" x-data="{ mobileMenuOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
             
-            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-<div class="flex items-center space-x-8">
-    <a href="{{ url('/') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('/') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        Home
-        @if(request()->is('/'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
+            <!-- Logo & Brand Name -->
+            <a href="{{ url('/') }}" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-brandOrange flex items-center justify-center font-black text-white text-xs shadow-md">
+                    OSP
+                </div>
+                <div>
+                    <span class="font-black text-lg text-navy tracking-wide block leading-none">OM SAI PRINT</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mt-0.5">Silk-Screen Bottle Printing</span>
+                </div>
+            </a>
 
-    <a href="{{ url('/the-machine') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('the-machine') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        The Machine
-        @if(request()->is('the-machine'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
+            <!-- Desktop Navigation Links (hidden on mobile) -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="{{ url('/') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('/') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    Home
+                    @if(request()->is('/'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
 
-    <a href="{{ url('/gallery') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('gallery') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        Gallery
-        @if(request()->is('gallery'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
+                <a href="{{ url('/the-machine') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('the-machine') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    The Machine
+                    @if(request()->is('the-machine'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
 
-    <a href="{{ route('industries.index') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('industries*') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        Industries
-        @if(request()->is('industries*'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
+                <a href="{{ url('/gallery') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('gallery') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    Gallery
+                    @if(request()->is('gallery'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
 
-    <a href="{{ url('/quality') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('quality') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        Quality
-        @if(request()->is('quality'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
+                <a href="{{ route('industries.index') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('industries*') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    Industries
+                    @if(request()->is('industries*'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
 
-    <a href="{{ url('/about') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('about') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        About
-        @if(request()->is('about'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
+                <a href="{{ url('/quality') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('quality') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    Quality
+                    @if(request()->is('quality'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
 
-    <a href="{{ url('/contact') }}" 
-       class="relative py-2 text-sm font-semibold transition {{ request()->is('contact') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
-        Contact
-        @if(request()->is('contact'))
-            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
-        @endif
-    </a>
-</div>
+                <a href="{{ url('/about') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('about') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    About
+                    @if(request()->is('about'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
+
+                <a href="{{ url('/contact') }}" 
+                   class="relative py-2 text-sm font-semibold transition {{ request()->is('contact') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+                    Contact
+                    @if(request()->is('contact'))
+                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+                    @endif
+                </a>
             </nav>
 
-            <!-- Trigger Button -->
-            <button @click="quoteModalOpen = true" class="bg-brandOrange hover:opacity-90 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-sm cursor-pointer">
-                Request a Quote
-            </button>
+            <!-- Right Desktop Action Button -->
+            <div class="hidden lg:flex items-center">
+                <a href="{{ url('/#contact') }}" class="bg-brandOrange hover:opacity-90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition shadow-md">
+                    Request a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="flex items-center md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" 
+                        type="button" 
+                        class="p-2.5 rounded-xl text-slate-700 hover:text-navy hover:bg-slate-100 focus:outline-none transition" 
+                        aria-label="Toggle Navigation Menu">
+                    <!-- Hamburger Icon -->
+                    <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <!-- Close (X) Icon -->
+                    <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
         </div>
-    </header>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div x-show="mobileMenuOpen" 
+         x-cloak
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 -translate-y-2"
+         @click.away="mobileMenuOpen = false"
+         class="md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+        
+        <a href="{{ url('/') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('/') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            Home
+        </a>
+
+        <a href="{{ url('/the-machine') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('the-machine') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            The Machine
+        </a>
+
+        <a href="{{ url('/gallery') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('gallery') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            Gallery
+        </a>
+
+        <a href="{{ route('industries.index') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('industries*') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            Industries
+        </a>
+
+        <a href="{{ url('/quality') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('quality') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            Quality
+        </a>
+
+        <a href="{{ url('/about') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('about') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            About Us
+        </a>
+
+        <a href="{{ url('/contact') }}" 
+           class="block px-4 py-2.5 rounded-xl text-sm font-bold {{ request()->is('contact') ? 'bg-orange-50 text-brandOrange' : 'text-slate-700 hover:bg-slate-50' }}">
+            Contact
+        </a>
+
+        <div class="pt-2">
+            <a href="{{ url('/#contact') }}" class="block text-center bg-brandOrange text-white text-sm font-bold py-3 rounded-xl shadow-md">
+                Request a Quote
+            </a>
+        </div>
+    </div>
+</header>
 
     <!-- Main Page Content -->
     <main>
