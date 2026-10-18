@@ -105,48 +105,91 @@
         @yield('content')
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-16 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div>
-                <h3 class="font-extrabold text-lg mb-3 tracking-wide">OM SAI PRINT</h3>
-                <p class="text-xs text-slate-300 leading-relaxed">The fully automatic silk-screen printing partner for bottle manufacturers and brands. Decorating plastic bottles since 2002.</p>
+<!-- Footer Section -->
+<footer class="bg-navy text-white pt-16 pb-8 border-t border-slate-800 px-6">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-slate-800/80">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="lg:col-span-4 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-brandOrange flex items-center justify-center font-black text-white text-xs">
+                        OSP
+                    </div>
+                    <span class="font-extrabold text-lg text-white tracking-wide">OM SAI PRINT</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+                    The fully automatic silk-screen printing partner for bottle manufacturers and brands. Decorating plastic bottles with precision since 2002.
+                </p>
+                <div class="pt-2">
+                    <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
+                        Techno Robotics Automatic Line
+                    </span>
+                </div>
             </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-widest text-brandOrange font-bold mb-4">EXPLORE</h4>
-                <ul class="space-y-2 text-xs text-slate-300">
-                    <li><a href="{{ url('/') }}" class="hover:underline">Home</a></li>
-                    <li><a href="{{ url('/the-machine') }}" class="hover:underline">The Machine</a></li>
-                    <li><a href="{{ url('/gallery') }}" class="hover:underline">Gallery</a></li>
-                    <li><a href="{{ route('industries.index') }}" 
-   class="text-xs font-medium transition pb-1 {{ request()->is('industries*') ? 'text-brandOrange border-b-2 border-brandOrange font-bold' : 'text-slate-600 hover:text-navy' }}">
-    Industries
-</a></li>
-                    <li><a href="{{ url('/quality') }}" class="hover:underline">Quality</a></li>
-                    <li><a href="{{ url('/about') }}" class="hover:underline">About</a></li>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="lg:col-span-3 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">EXPLORE</h3>
+                <ul class="space-y-2 text-xs font-medium text-slate-300">
+                    <li><a href="{{ url('/') }}" class="hover:text-white transition">Home</a></li>
+                    <li><a href="{{ url('/the-machine') }}" class="hover:text-white transition">The Machine</a></li>
+                    <li><a href="{{ url('/gallery') }}" class="hover:text-white transition">Gallery</a></li>
+                    <li><a href="{{ route('industries.index') }}" class="hover:text-white transition">Industries</a></li>
+                    <li><a href="{{ url('/quality') }}" class="hover:text-white transition">Quality</a></li>
+                    <li><a href="{{ url('/about') }}" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="{{ url('/contact') }}" class="hover:text-white transition">Contact Us</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-widest text-brandOrange font-bold mb-4">CONTACT</h4>
-                <p class="text-xs text-slate-300 font-medium">Owner</p>
-                <p class="text-sm font-bold text-white mb-2">Ashok Singh</p>
-                <p class="text-xs text-slate-300 mb-1">+91 98230 86791</p>
-                <p class="text-xs text-slate-300 mb-1">ashokimp71@gmail.com</p>
-                <p class="text-xs text-slate-300">WhatsApp us</p>
+
+            <!-- Column 3: Direct Contact Details -->
+            <div class="lg:col-span-3 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">CONTACT</h3>
+                <div class="text-xs space-y-2 text-slate-300 leading-relaxed">
+                    <p class="text-white font-semibold">Ashok Singh <span class="text-slate-400 font-normal">(Owner)</span></p>
+                    <p>
+                        <a href="tel:+919823086791" class="hover:text-brandOrange transition flex items-center space-x-2">
+                            <span>📞 +91 98230 86791</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:ashokimp71@gmail.com" class="hover:text-brandOrange transition flex items-center space-x-2">
+                            <span>✉️ ashokimp71@gmail.com</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://wa.me/919823086791?text=Hi%20Om%20Sai%20Print%2C%20I%20would%20like%20to%20discuss%20bottle%20printing." target="_blank" class="text-brandOrange font-semibold hover:underline flex items-center space-x-1">
+                            <span>💬 Chat on WhatsApp</span>
+                        </a>
+                    </p>
+                </div>
             </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-widest text-brandOrange font-bold mb-4">GET STARTED</h4>
-                <p class="text-xs text-slate-300 mb-4">Configure your bottle and request a tailored quote.</p>
-                <button @click="quoteModalOpen = true" class="bg-brandOrange hover:opacity-90 text-white px-5 py-2.5 rounded-full text-xs font-semibold transition cursor-pointer">
-                    Request a Quote &rarr;
-                </button>
+
+            <!-- Column 4: Quick Action -->
+            <div class="lg:col-span-2 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">GET STARTED</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Configure your bottle parameters and request a custom quote.
+                </p>
+                <div class="pt-1">
+                    <a href="{{ url('/#contact') }}" class="inline-flex items-center justify-center bg-brandOrange hover:opacity-90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition shadow-md space-x-1">
+                        <span>Request a Quote</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
             </div>
+
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-slate-700/60 text-[11px] text-slate-400 flex flex-col md:flex-row justify-between">
-            <p>© 2026 Om Sai Print. All rights reserved.</p>
-            <p>Established 2002 • Automatic Techno Robotics silk-screen line</p>
+
+        <!-- Bottom Copyright Row -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
+            <p>&copy; {{ date('Y') }} Om Sai Print. All rights reserved.</p>
+            <p class="text-slate-500">Established 2002 &middot; Automatic Techno Robotics Silk-Screen Line</p>
         </div>
-    </footer>
+
+    </div>
+</footer>
 
     <!-- Fixed Floating WhatsApp Button (Bottom Right) -->
     <a href="https://wa.me/919823086791?text=Hi%20Om%20Sai%20Print%2C%20I%20would%20like%20to%20inquire%20about%20bottle%20printing." target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-full font-semibold text-xs shadow-xl flex items-center space-x-2 transition">
