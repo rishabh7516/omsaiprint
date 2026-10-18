@@ -2,107 +2,136 @@
 
 @section('content')
 
-<!-- 1. Hero Section -->
+<!-- 1. Navy Hero Band -->
 <section class="bg-navy text-white py-20 px-6">
     <div class="max-w-7xl mx-auto">
+        <!-- Eyebrow -->
         <span class="text-xs uppercase tracking-widest text-brandOrange font-bold block mb-3">
             QUALITY & PROCESS
         </span>
+
+        <!-- Heading -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 max-w-4xl">
             Quality engineered into every stage.
         </h1>
+
+        <!-- Paragraph -->
         <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
             We don't inspect quality in at the end — it's built into every step, from surface activation to inline leak testing, so what leaves the line is consistent and shelf-ready.
         </p>
     </div>
 </section>
 
-<!-- 2. Quality Cards Grid Section -->
-<section class="py-20 bg-pageBg px-6">
+<!-- 2. Six Numbered Cards Grid -->
+<section class="py-20 bg-slate-50 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Card 01: Flame Adhesion -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold group-hover:bg-brandOrange transition-colors duration-300">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+
+            <!-- Card 01 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="p-6 pb-0 flex items-center justify-between">
+                        <span class="text-3xl font-extrabold text-brandOrange">01</span>
                     </div>
-                    <span class="text-2xl font-extrabold text-navy">01</span>
+                    <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
+                        <img src="/images/machine-auto-line.jpg" alt="Flame Adhesion" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-extrabold text-navy mb-3">Flame Adhesion</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Online flame or plasma treatment activates the surface before printing, so the ink bonds to the bottle and survives handling, filling and transport.
+                        </p>
+                    </div>
                 </div>
-                <h3 class="font-bold text-navy text-xl mb-3">Flame Adhesion</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    Online flame treatment guarantees ink bonds that survive handling, filling and transport.
-                </p>
             </div>
 
-            <!-- Card 02: Print Registration -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold group-hover:bg-brandOrange transition-colors duration-300">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+            <!-- Card 02 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="p-6 pb-0 flex items-center justify-between">
+                        <span class="text-3xl font-extrabold text-brandOrange">02</span>
                     </div>
-                    <span class="text-2xl font-extrabold text-navy">02</span>
+                    <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
+                        <img src="/images/cosmetic-shampoo.jpg" alt="Print Registration" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-extrabold text-navy mb-3">Print Registration</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Up to six colours land in register on every piece, so multi-colour artwork stays sharp from the first bottle to the last.
+                        </p>
+                    </div>
                 </div>
-                <h3 class="font-bold text-navy text-xl mb-3">Print Registration</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    Synchronised stations hold tight registration so multi-colour artwork lines up perfectly.
-                </p>
             </div>
 
-            <!-- Card 03: UV Durability -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold group-hover:bg-brandOrange transition-colors duration-300">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <!-- Card 03 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="p-6 pb-0 flex items-center justify-between">
+                        <span class="text-3xl font-extrabold text-brandOrange">03</span>
                     </div>
-                    <span class="text-2xl font-extrabold text-navy">03</span>
+                    <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
+                        <img src="/images/gallery-7.jpg" alt="UV Durability" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-extrabold text-navy mb-3">UV Durability</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            IR and LED-UV curing produces a scratch- and fade-resistant finish, and every bottle in a range carries the same print in the same place.
+                        </p>
+                    </div>
                 </div>
-                <h3 class="font-bold text-navy text-xl mb-3">UV Durability</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    LED-UV curing produces a scratch- and fade-resistant finish that lasts on shelf.
-                </p>
             </div>
 
-            <!-- Card 04: Leak Testing -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold group-hover:bg-brandOrange transition-colors duration-300">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            <!-- Card 04 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="p-6 pb-0 flex items-center justify-between">
+                        <span class="text-3xl font-extrabold text-brandOrange">04</span>
                     </div>
-                    <span class="text-2xl font-extrabold text-navy">04</span>
+                    <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
+                        <img src="/images/paint-stainer.jpg" alt="Fine Text Stays Legible" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-extrabold text-navy mb-3">Fine Text Stays Legible</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Shade codes, dosage tables and back-panel directions stay sharp and legible, even in small sizes and high-contrast colours.
+                        </p>
+                    </div>
                 </div>
-                <h3 class="font-bold text-navy text-xl mb-3">Leak Testing</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    Inline leak detection catches defects early, keeping reject rates consistently low.
-                </p>
             </div>
 
-            <!-- Card 05: rPET Ready -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold group-hover:bg-brandOrange transition-colors duration-300">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            <!-- Card 05 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="p-6 pb-0 flex items-center justify-between">
+                        <span class="text-3xl font-extrabold text-brandOrange">05</span>
                     </div>
-                    <span class="text-2xl font-extrabold text-navy">05</span>
+                    <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
+                        <img src="/images/baby-feeding.jpg" alt="Non-Toxic & Wash Safe" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-extrabold text-navy mb-3">Non-Toxic & Wash Safe</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Food-safe and non-toxic inks used for feeding bottles and kitchenware withstand washing, sterilisation and daily handling without degrading.
+                        </p>
+                    </div>
                 </div>
-                <h3 class="font-bold text-navy text-xl mb-3">rPET Ready</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    Optimised for recycled PET substrates to support sustainable packaging goals.
-                </p>
             </div>
 
-            <!-- Card 06: Low Reject Rates Image Card -->
-            <div class="relative rounded-3xl overflow-hidden shadow-md group border border-slate-700 h-full min-h-[260px] flex flex-col justify-end p-8">
-                <img src="/images/the-machine.jpg" alt="Low reject rates" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-navy/80 backdrop-blur-[2px]"></div>
-                
-                <div class="relative z-10">
-                    <h3 class="text-2xl font-extrabold text-brandOrange mb-1">Low</h3>
-                    <p class="text-xl font-bold text-white mb-2 leading-tight">reject rates, by design</p>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Automation removes operator variability at high volume.
-                    </p>
+            <!-- Card 06 -->
+            <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="p-6 pb-0 flex items-center justify-between">
+                        <span class="text-3xl font-extrabold text-brandOrange">06</span>
+                    </div>
+                    <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
+                        <img src="/images/machine-leak-testing.jpg" alt="100% Inline Leak Testing" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-extrabold text-navy mb-3">100% Inline Leak Testing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Automated leak testing on the line checks every bottle so defective containers never make it to packing or store shelves.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -122,7 +151,7 @@
         </p>
 
         <div class="flex justify-center space-x-4">
-            <a href="{{ url('/#contact') }}" class="bg-brandOrange hover:opacity-90 text-white px-6 py-3 rounded-full text-xs font-semibold transition flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <a href="{{ url('/#contact') }}" class="bg-brandOrange hover:opacity-90 text-white px-6 py-3 rounded-full text-xs font-semibold transition flex items-center space-x-2 shadow-md">
                 <span>Request a Quote</span>
                 <span>&rarr;</span>
             </a>
