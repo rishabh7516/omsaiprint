@@ -34,16 +34,63 @@
             </div>
             
             <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-                <a href="{{ url('/') }}" class="hover:text-navy transition pb-1 {{ Request::is('/') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Home</a>
-                <a href="{{ url('/the-machine') }}" class="hover:text-navy transition pb-1 {{ Request::is('the-machine') ? 'text-navy border-b-2 border-brandOrange' : '' }}">The Machine</a>
-                <a href="{{ url('/gallery') }}" class="hover:text-navy transition pb-1 {{ Request::is('gallery') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Gallery</a>
-               <a href="{{ route('industries.index') }}" 
-   class="text-xs font-medium transition pb-1 {{ request()->is('industries*') ? 'text-brandOrange border-b-2 border-brandOrange font-bold' : 'text-slate-600 hover:text-navy' }}">
-    Industries
-</a>
-                <a href="{{ url('/quality') }}" class="hover:text-navy transition pb-1 {{ Request::is('quality') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Quality</a>
-                <a href="{{ url('/about') }}" class="hover:text-navy transition pb-1 {{ Request::is('about') ? 'text-navy border-b-2 border-brandOrange' : '' }}">About</a>
-                <a href="{{ url('/contact') }}" class="hover:text-navy transition pb-1 {{ Request::is('contact') ? 'text-navy border-b-2 border-brandOrange' : '' }}">Contact</a>
+<div class="flex items-center space-x-8">
+    <a href="{{ url('/') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('/') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        Home
+        @if(request()->is('/'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+
+    <a href="{{ url('/the-machine') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('the-machine') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        The Machine
+        @if(request()->is('the-machine'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+
+    <a href="{{ url('/gallery') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('gallery') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        Gallery
+        @if(request()->is('gallery'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+
+    <a href="{{ route('industries.index') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('industries*') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        Industries
+        @if(request()->is('industries*'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+
+    <a href="{{ url('/quality') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('quality') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        Quality
+        @if(request()->is('quality'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+
+    <a href="{{ url('/about') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('about') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        About
+        @if(request()->is('about'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+
+    <a href="{{ url('/contact') }}" 
+       class="relative py-2 text-sm font-semibold transition {{ request()->is('contact') ? 'text-brandOrange' : 'text-slate-600 hover:text-navy' }}">
+        Contact
+        @if(request()->is('contact'))
+            <span class="absolute bottom-0 left-0 w-full h-[2px] bg-brandOrange rounded-full"></span>
+        @endif
+    </a>
+</div>
             </nav>
 
             <!-- Trigger Button -->
