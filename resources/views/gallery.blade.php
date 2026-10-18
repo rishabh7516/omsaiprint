@@ -12,7 +12,7 @@
             Bottles we've brought to life.
         </h1>
         <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-            Placeholder shots grouped by industry and shape — swap in your own product photography later. We decorate bottles; we don't sell them.
+            Explore our screen printing work across all 6 industry sectors. Filter by sector or bottle shape to see precise decoration, measurement scales, and high-opacity prints.
         </p>
     </div>
 </section>
@@ -22,14 +22,28 @@
     selectedIndustry: 'All', 
     selectedShape: 'All',
     items: [
-        { id: 1, title: 'Serum Dropper Bottle', industry: 'Cosmetics', shape: 'Round', img: '/images/gallery-1.jpg' },
-        { id: 2, title: 'Matte Lotion Container', industry: 'Cosmetics', shape: 'Flat', img: '/images/gallery-2.jpg' },
-        { id: 3, title: 'Feeding Bottle', industry: 'Pharma', shape: 'Round', img: '/images/gallery-3.jpg' },
-        { id: 4, title: 'Cosmetic Pump Bottle', industry: 'Cosmetics', shape: 'Oval', img: '/images/gallery-4.jpg' },
-        { id: 5, title: 'Agro Dosing Bottle', industry: 'Agrochemical', shape: 'Round', img: '/images/gallery-5.jpg' },
-        { id: 6, title: 'Skincare Dropper', industry: 'Cosmetics', shape: 'Flat', img: '/images/gallery-6.jpg' },
-        { id: 7, title: 'Pharma Liquid Bottle', industry: 'Pharma', shape: 'Round', img: '/images/gallery-7.jpg' },
-        { id: 8, title: 'Adhesive Dispenser', industry: 'Adhesives', shape: 'Oval', img: '/images/gallery-8.jpg' }
+        // Sector 1: Cosmetic & Personal Care (2 Products)
+        { id: 1, title: 'Shampoo & Conditioner Bottles', industry: 'Cosmetics', shape: 'Round', img: '/images/cosmetic-shampoo.jpg', link: '/industries/cosmetic-personal-care/shampoo-conditioner-bottles' },
+        { id: 2, title: 'Serum & Essential Oil Droppers', industry: 'Cosmetics', shape: 'Round', img: '/images/cosmetic-serum.jpg', link: '/industries/cosmetic-personal-care/serum-dropper-bottles' },
+
+        // Sector 2: Baby & Feeding Bottles (5 Products)
+        { id: 3, title: 'Graduated Feeding Bottle', industry: 'Baby & Feeding', shape: 'Round', img: '/images/baby-feeding.jpg', link: '/industries/baby-feeding-bottles/graduated-feeding-bottles' },
+        { id: 4, title: 'Sippy Cups & Sippers', industry: 'Baby & Feeding', shape: 'Round', img: '/images/baby-sippy.jpg', link: '/industries/baby-feeding-bottles/sippy-cups-sippers' },
+        { id: 5, title: 'Ergonomic Grip Nursing Bottle', industry: 'Baby & Feeding', shape: 'Oval', img: '/images/gallery-3.jpg', link: '/industries/baby-feeding-bottles' },
+        { id: 6, title: 'Wide Neck Glass Baby Bottle', industry: 'Baby & Feeding', shape: 'Round', img: '/images/gallery-7.jpg', link: '/industries/baby-feeding-bottles' },
+        { id: 7, title: 'Toddler Training Tumbler', industry: 'Baby & Feeding', shape: 'Flat', img: '/images/gallery-4.jpg', link: '/industries/baby-feeding-bottles' },
+
+        // Sector 3: Paint Stainers & Tinting Colourants (1 Product)
+        { id: 8, title: 'Tinting Stainer Squeeze Bottle', industry: 'Paint Stainers', shape: 'Round', img: '/images/paint-stainer.jpg', link: '/industries/paint-stainers-tinting-colourants/tinting-stainer-squeeze-bottles' },
+
+        // Sector 4: Industrial, Lubricants & Adhesives (1 Product)
+        { id: 9, title: 'Engine Oil & Lubricant Bottle', industry: 'Industrial & Lubricants', shape: 'Flat', img: '/images/industrial-oil.jpg', link: '/industries/industrial-lubricants-adhesives/engine-oil-lubricant-bottles' },
+
+        // Sector 5: Food & Household (1 Product)
+        { id: 10, title: 'Sauce & Condiment Squeeze Bottle', industry: 'Food & Household', shape: 'Round', img: '/images/food-sauce.jpg', link: '/industries/food-household/sauce-squeeze-bottles' },
+
+        // Sector 6: Machine Photos (1 Product)
+        { id: 11, title: 'Techno Robotics Automatic Line', industry: 'Machine Photos', shape: 'Round', img: '/images/machine-line.jpg', link: '/industries/machine-photos/techno-robotics-auto-line' }
     ],
     get filteredItems() {
         return this.items.filter(item => {
@@ -44,13 +58,13 @@
         <!-- Filter Controls Container -->
         <div class="space-y-6 mb-12 border-b border-slate-200 pb-8">
             
-            <!-- Industry Filter Row -->
+            <!-- Industry Filter Row (All 6 Sectors) -->
             <div class="flex flex-wrap items-center gap-3">
                 <span class="text-xs uppercase tracking-widest text-slate-400 font-bold w-24">Industry</span>
-                <template x-for="ind in ['All', 'Cosmetics', 'Pharma', 'Agrochemical', 'Adhesives']">
+                <template x-for="ind in ['All', 'Cosmetics', 'Baby & Feeding', 'Paint Stainers', 'Industrial & Lubricants', 'Food & Household', 'Machine Photos']">
                     <button @click="selectedIndustry = ind"
                             :class="selectedIndustry === ind ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'"
-                            class="px-5 py-2 rounded-full text-xs font-semibold transition duration-200 cursor-pointer"
+                            class="px-4 py-2 rounded-full text-xs font-semibold transition duration-200 cursor-pointer"
                             x-text="ind">
                     </button>
                 </template>
@@ -73,7 +87,7 @@
         <!-- Gallery Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <template x-for="item in filteredItems" :key="item.id">
-                <div class="group relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 h-[380px] flex flex-col justify-end">
+                <a :href="item.link" class="group relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 h-[380px] flex flex-col justify-end">
                     
                     <!-- Background Product Image with Hover Zoom -->
                     <div class="absolute inset-0 z-0 overflow-hidden bg-slate-200">
@@ -94,7 +108,7 @@
                         <p class="text-xs text-slate-300 font-medium" x-text="item.industry + ' · ' + item.shape"></p>
                     </div>
 
-                </div>
+                </a>
             </template>
         </div>
 
