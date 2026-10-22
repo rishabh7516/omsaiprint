@@ -12,86 +12,55 @@
             Bottles we've brought to life.
         </h1>
         <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-            Explore our screen printing work across all 6 industry sectors. Filter by sector or bottle shape to see precise decoration, measurement scales, and high-opacity prints.
+            Explore our screen printing work across all industry sectors. Filter by sector category to see precise decoration and high-opacity prints.
         </p>
     </div>
 </section>
 
-<!-- 2. Gallery Section with Interactive Filters & Hover Effects -->
-<section class="py-16 bg-white px-6 min-h-[700px]" x-data="{ 
-    selectedIndustry: 'All', 
-    selectedShape: 'All',
-    items: [
-        // Sector 1: Cosmetic & Personal Care (2 Products)
-        { id: 1, title: 'Shampoo & Conditioner Bottles', industry: 'Cosmetics', shape: 'Round', img: '/images/cosmetic-shampoo.jpg', link: '/industries/cosmetic-personal-care/shampoo-conditioner-bottles' },
-        { id: 2, title: 'Serum & Essential Oil Droppers', industry: 'Cosmetics', shape: 'Round', img: '/images/cosmetic-serum.jpg', link: '/industries/cosmetic-personal-care/serum-dropper-bottles' },
-
-        // Sector 2: Baby & Feeding Bottles (5 Products)
-        { id: 3, title: 'Graduated Feeding Bottle', industry: 'Baby & Feeding', shape: 'Round', img: '/images/baby-feeding.jpg', link: '/industries/baby-feeding-bottles/graduated-feeding-bottles' },
-        { id: 4, title: 'Sippy Cups & Sippers', industry: 'Baby & Feeding', shape: 'Round', img: '/images/baby-sippy.jpg', link: '/industries/baby-feeding-bottles/sippy-cups-sippers' },
-        { id: 5, title: 'Ergonomic Grip Nursing Bottle', industry: 'Baby & Feeding', shape: 'Oval', img: '/images/gallery-3.jpg', link: '/industries/baby-feeding-bottles' },
-        { id: 6, title: 'Wide Neck Glass Baby Bottle', industry: 'Baby & Feeding', shape: 'Round', img: '/images/gallery-7.jpg', link: '/industries/baby-feeding-bottles' },
-        { id: 7, title: 'Toddler Training Tumbler', industry: 'Baby & Feeding', shape: 'Flat', img: '/images/gallery-4.jpg', link: '/industries/baby-feeding-bottles' },
-
-        // Sector 3: Paint Stainers & Tinting Colourants (1 Product)
-        { id: 8, title: 'Tinting Stainer Squeeze Bottle', industry: 'Paint Stainers', shape: 'Round', img: '/images/paint-stainer.jpg', link: '/industries/paint-stainers-tinting-colourants/tinting-stainer-squeeze-bottles' },
-
-        // Sector 4: Industrial, Lubricants & Adhesives (1 Product)
-        { id: 9, title: 'Engine Oil & Lubricant Bottle', industry: 'Industrial & Lubricants', shape: 'Flat', img: '/images/industrial-oil.jpg', link: '/industries/industrial-lubricants-adhesives/engine-oil-lubricant-bottles' },
-
-        // Sector 5: Food & Household (1 Product)
-        { id: 10, title: 'Sauce & Condiment Squeeze Bottle', industry: 'Food & Household', shape: 'Round', img: '/images/food-sauce.jpg', link: '/industries/food-household/sauce-squeeze-bottles' },
-
-        // Sector 6: Machine Photos (1 Product)
-        { id: 11, title: 'Techno Robotics Automatic Line', industry: 'Machine Photos', shape: 'Round', img: '/images/machine-line.jpg', link: '/industries/machine-photos/techno-robotics-auto-line' }
-    ],
-    get filteredItems() {
-        return this.items.filter(item => {
-            let matchIndustry = (this.selectedIndustry === 'All' || item.industry === this.selectedIndustry);
-            let matchShape = (this.selectedShape === 'All' || item.shape === this.selectedShape);
-            return matchIndustry && matchShape;
-        });
-    }
-}">
+<!-- 2. Gallery Section displaying all products dynamically -->
+<section class="py-16 bg-white px-6 min-h-[700px]" 
+         x-data="{ 
+            selectedCategory: 'All',
+            products: @js($products),
+            get filteredProducts() {
+                if (this.selectedCategory === 'All') {
+                    return this.products;
+                }
+                return this.products.filter(item => item.category === this.selectedCategory);
+            }
+         }">
     <div class="max-w-7xl mx-auto">
         
-        <!-- Filter Controls Container -->
+        <!-- Filter Controls Container (Dynamically derived categories or standard sectors) -->
         <div class="space-y-6 mb-12 border-b border-slate-200 pb-8">
-            
-            <!-- Industry Filter Row (All 6 Sectors) -->
             <div class="flex flex-wrap items-center gap-3">
-                <span class="text-xs uppercase tracking-widest text-slate-400 font-bold w-24">Industry</span>
-                <template x-for="ind in ['All', 'Cosmetics', 'Baby & Feeding', 'Paint Stainers', 'Industrial & Lubricants', 'Food & Household', 'Machine Photos']">
-                    <button @click="selectedIndustry = ind"
-                            :class="selectedIndustry === ind ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'"
+                <span class="text-xs uppercase tracking-widest text-slate-400 font-bold w-24">Sector</span>
+                
+                <button @click="selectedCategory = 'All'"
+                        :class="selectedCategory === 'All' ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'"
+                        class="px-4 py-2 rounded-full text-xs font-semibold transition duration-200 cursor-pointer">
+                    All Products
+                </button>
+
+                <template x-for="cat in [...new Set(products.map(p => p.category))]">
+                    <button @click="selectedCategory = cat"
+                            :class="selectedCategory === cat ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'"
                             class="px-4 py-2 rounded-full text-xs font-semibold transition duration-200 cursor-pointer"
-                            x-text="ind">
+                            x-text="cat">
                     </button>
                 </template>
             </div>
-
-            <!-- Shape Filter Row -->
-            <div class="flex flex-wrap items-center gap-3">
-                <span class="text-xs uppercase tracking-widest text-slate-400 font-bold w-24">Shape</span>
-                <template x-for="shp in ['All', 'Round', 'Flat', 'Oval']">
-                    <button @click="selectedShape = shp"
-                            :class="selectedShape === shp ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'"
-                            class="px-5 py-2 rounded-full text-xs font-semibold transition duration-200 cursor-pointer"
-                            x-text="shp">
-                    </button>
-                </template>
-            </div>
-
         </div>
 
-        <!-- Gallery Grid -->
+        <!-- Gallery Grid of Products -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <template x-for="item in filteredItems" :key="item.id">
-                <a :href="item.link" class="group relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 h-[380px] flex flex-col justify-end">
+            <template x-for="product in filteredProducts" :key="product.id">
+                <a :href="'/industries/' + (product.sector ? product.sector.slug : 'general') + '/' + product.slug" 
+                   class="group relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 h-[380px] flex flex-col justify-end">
                     
                     <!-- Background Product Image with Hover Zoom -->
                     <div class="absolute inset-0 z-0 overflow-hidden bg-slate-200">
-                        <img :src="item.img" :alt="item.title" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700">
+                        <img :src="product.image" :alt="product.name" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700">
                     </div>
 
                     <!-- Subtle Overlay Gradient on Hover -->
@@ -104,17 +73,19 @@
 
                     <!-- Card Content Details at Bottom -->
                     <div class="relative z-20 p-6 transform group-hover:-translate-y-1 transition-transform duration-300">
-                        <h3 class="font-bold text-white text-lg mb-1" x-text="item.title"></h3>
-                        <p class="text-xs text-slate-300 font-medium" x-text="item.industry + ' · ' + item.shape"></p>
+                        <span class="text-[10px] uppercase tracking-wider text-orange-400 font-bold block mb-1" x-text="product.category"></span>
+                        <h3 class="font-bold text-white text-lg mb-1 truncate" x-text="product.name"></h3>
+                        <p class="text-xs text-slate-300 font-medium truncate" x-text="product.what_it_is"></p>
                     </div>
 
                 </a>
             </template>
         </div>
 
-        <!-- Empty State if no results match -->
-        <div x-show="filteredItems.length === 0" class="text-center py-24 text-slate-400">
-            <p class="text-base font-medium">No bottle items found matching your selected filter criteria.</p>
+        <!-- Empty State if no products match -->
+        <div x-show="filteredProducts.length === 0" class="text-center py-24 text-slate-400" x-cloak>
+            <p class="text-base font-medium">No products found in this sector yet.</p>
+            <p class="text-xs text-slate-400 mt-2">Add products from your admin panel at <a href="{{ route('admin.products.index') }}" class="text-brandOrange underline">/admin/products</a></p>
         </div>
 
     </div>
