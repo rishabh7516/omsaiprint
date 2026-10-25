@@ -27,16 +27,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
             
-            <!-- Logo & Brand Name -->
-            <a href="{{ url('/') }}" class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-brandOrange flex items-center justify-center font-black text-white text-xs shadow-md">
-                    OSP
-                </div>
-                <div>
-                    <span class="font-black text-lg text-navy tracking-wide block leading-none">OM SAI PRINT</span>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mt-0.5">Silk-Screen Bottle Printing</span>
-                </div>
-            </a>
+<!-- Logo & Brand Name -->
+<a href="{{ url('/') }}" class="flex items-center space-x-3">
+    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden border border-slate-200">
+        <img src="/images/logo.jpg" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
+    </div>
+    <div>
+        <span class="font-black text-lg text-navy tracking-wide block leading-none">OM SAI PRINT</span>
+        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mt-0.5">Silk-Screen Bottle Printing</span>
+    </div>
+</a>
 
             <!-- Desktop Navigation Links (hidden on mobile) -->
             <nav class="hidden md:flex items-center space-x-8">
@@ -190,23 +190,23 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-slate-800/80">
             
-            <!-- Column 1: Brand Info -->
-            <div class="lg:col-span-4 space-y-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 rounded-full bg-brandOrange flex items-center justify-center font-black text-white text-xs">
-                        OSP
-                    </div>
-                    <span class="font-extrabold text-lg text-white tracking-wide">OM SAI PRINT</span>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
-                    The fully automatic silk-screen printing partner for bottle manufacturers and brands. Decorating plastic bottles with precision since 2002.
-                </p>
-                <div class="pt-2">
-                    <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
-                        Om Sai Prints
-                    </span>
-                </div>
-            </div>
+<!-- Column 1: Brand Info -->
+<div class="lg:col-span-4 space-y-4">
+    <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden border border-slate-700/50 shadow-sm">
+            <img src="/images/logo.jpg" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
+        </div>
+        <span class="font-extrabold text-lg text-white tracking-wide">OM SAI PRINT</span>
+    </div>
+    <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+        The fully automatic silk-screen printing partner for bottle manufacturers and brands. Decorating plastic bottles with precision since 2002.
+    </p>
+    <div class="pt-2">
+        <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
+            Om Sai Prints
+        </span>
+    </div>
+</div>
 
             <!-- Column 2: Navigation Links -->
             <div class="lg:col-span-3 space-y-3">

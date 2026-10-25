@@ -34,7 +34,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">01</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/machine-auto-line.jpg" alt="Flame Adhesion" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/Flame Adhesion.jpg" alt="Flame Adhesion" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">Flame Adhesion</h3>
@@ -52,7 +52,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">02</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/cosmetic-shampoo.jpg" alt="Print Registration" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/Print Registration.jpg" alt="Print Registration" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">Print Registration</h3>
@@ -70,7 +70,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">03</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/gallery-7.jpg" alt="UV Durability" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/UV Durability.jpg" alt="UV Durability" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">UV Durability</h3>
@@ -88,7 +88,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">04</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/paint-stainer.jpg" alt="Fine Text Stays Legible" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/Fine Text Stays Legible.jpg" alt="Fine Text Stays Legible" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">Fine Text Stays Legible</h3>
@@ -106,7 +106,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">05</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/baby-feeding.jpg" alt="Non-Toxic & Wash Safe" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/Non-Toxic & Wash Safe.jpg" alt="Non-Toxic & Wash Safe" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">Non-Toxic & Wash Safe</h3>
@@ -124,7 +124,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">06</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/machine-leak-testing.jpg" alt="100% Inline Leak Testing" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/100% Inline Leak Testing.jpg" alt="100% Inline Leak Testing" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">100% Inline Leak Testing</h3>
