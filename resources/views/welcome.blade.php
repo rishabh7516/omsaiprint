@@ -25,38 +25,38 @@
 }
 </style>
 
-<!-- Hero Section (Full-Bleed Carousel Background Layout) -->
+<!-- Hero Section (Full-Bleed Carousel Background Layout with Clear Visibility & Centered Dots) -->
 <section id="home" class="relative min-h-[85vh] flex flex-col justify-between bg-navy text-white py-16 px-6 overflow-hidden">
     <!-- Carousel Background Images Container -->
     <div id="hero-carousel" class="absolute inset-0 z-0">
         <!-- Slide 1 -->
         <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-            <img src="/images/machine-auto-line.jpg" alt="Om Sai Print Machine 1" class="w-full h-full object-cover object-center opacity-30">
+            <img src="/images/machine-auto-line.jpg" alt="Om Sai Print Machine 1" class="w-full h-full object-cover object-center opacity-85">
         </div>
         <!-- Slide 2 -->
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="/images/machine-leak-testing.jpg" alt="Om Sai Print Machine 2" class="w-full h-full object-cover object-center opacity-30">
+            <img src="/images/machine-leak-testing.jpg" alt="Om Sai Print Machine 2" class="w-full h-full object-cover object-center opacity-85">
         </div>
         <!-- Slide 3 -->
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="/images/machine-single-colors.jpg" alt="Om Sai Print Machine 3" class="w-full h-full object-cover object-center opacity-30">
+            <img src="/images/machine-single-colors.jpg" alt="Om Sai Print Machine 3" class="w-full h-full object-cover object-center opacity-85">
         </div>
-        <!-- Dark Overlay Gradient -->
-        <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40 z-10"></div>
+        <!-- Lightened Dark Overlay Gradient for High Machine Visibility -->
+        <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-navy/30 z-10"></div>
     </div>
 
     <!-- Main Content Grid -->
     <div class="relative z-20 max-w-7xl mx-auto w-full my-auto py-8">
         <div class="max-w-3xl">
-            <span class="text-xs sm:text-sm font-semibold tracking-widest text-brandOrange uppercase">
+            <span class="text-xs sm:text-sm font-semibold tracking-widest text-brandOrange uppercase drop-shadow">
                 ESTABLISHED 2002 • Om Sai Prints
             </span>
             
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mt-4 mb-6 leading-tight text-white">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mt-4 mb-6 leading-tight text-white drop-shadow-md">
                 Fully automatic silk-screen printing on plastic bottles.
             </h1>
             
-            <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-100 mb-8 max-w-2xl leading-relaxed drop-shadow">
                 The printing partner for bottle manufacturers and brands — consistent multi-colour decoration, leak-tested quality, at high volume with low rejects.
             </p>
             
@@ -66,7 +66,7 @@
                     <span>&rarr;</span>
                 </a>
                 
-                <a href="https://wa.me/919823086791?text=Hi%20Om%20Sai%20Print%2C%20I%20would%20like%20a%20quote%20for%20bottle%20printing." target="_blank" class="bg-slate-900/60 hover:bg-slate-800 text-white px-6 py-3.5 rounded-full font-semibold text-sm border border-slate-500/60 backdrop-blur-sm transition flex items-center justify-center space-x-2">
+                <a href="https://wa.me/919823086791?text=Hi%20Om%20Sai%20Print%2C%20I%20would%20like%20a%20quote%20for%20bottle%20printing." target="_blank" class="bg-slate-900/80 hover:bg-slate-900 text-white px-6 py-3.5 rounded-full font-semibold text-sm border border-slate-500/60 backdrop-blur-sm transition flex items-center justify-center space-x-2 shadow-md">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                     <span>WhatsApp</span>
                 </a>
@@ -74,52 +74,88 @@
         </div>
     </div>
 
+    <!-- Centered 3-Dot Carousel Indicator Controls -->
+    <div class="relative z-30 flex justify-center items-center space-x-3 mb-6">
+        <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-brandOrange transition-all duration-300 transform scale-125 focus:outline-none" aria-label="Slide 1"></button>
+        <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 focus:outline-none" aria-label="Slide 2"></button>
+        <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 focus:outline-none" aria-label="Slide 3"></button>
+    </div>
+
     <!-- Bottom Feature Badges -->
-    <div class="relative z-20 max-w-7xl mx-auto w-full pt-8 border-t border-slate-700/50">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-300">
+    <div class="relative z-20 max-w-7xl mx-auto w-full pt-6 border-t border-slate-700/50">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-200">
             <div class="hover:translate-y-[-2px] transition duration-200">
                 <span class="block font-bold text-white text-base sm:text-lg">20 ml – 1L</span>
-                <span class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Bottle Range</span>
+                <span class="text-[11px] sm:text-xs text-slate-300 uppercase tracking-wider font-medium">Bottle Range</span>
             </div>
             <div class="hover:translate-y-[-2px] transition duration-200">
                 <span class="block font-bold text-white text-base sm:text-lg">Round • Flat • Oval</span>
-                <span class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Shapes</span>
+                <span class="text-[11px] sm:text-xs text-slate-300 uppercase tracking-wider font-medium">Shapes</span>
             </div>
             <div class="hover:translate-y-[-2px] transition duration-200">
                 <span class="block font-bold text-white text-base sm:text-lg">IR + LED-UV Cured</span>
-                <span class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Print Finish</span>
+                <span class="text-[11px] sm:text-xs text-slate-300 uppercase tracking-wider font-medium">Print Finish</span>
             </div>
             <div class="hover:translate-y-[-2px] transition duration-200">
                 <span class="block font-bold text-white text-base sm:text-lg">100% Inline</span>
-                <span class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium">Leak Tested</span>
+                <span class="text-[11px] sm:text-xs text-slate-300 uppercase tracking-wider font-medium">Leak Tested</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Lightweight Carousel Controller Script -->
+<!-- Carousel Script with Dot Switcher -->
 <script>
+    let slides = [];
+    let dots = [];
+    let currentSlide = 0;
+    let autoSlideTimer;
+
+    function updateSlideUI(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.remove("opacity-0");
+                slide.classList.add("opacity-100");
+            } else {
+                slide.classList.remove("opacity-100");
+                slide.classList.add("opacity-0");
+            }
+        });
+
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.className = "carousel-dot w-3 h-3 rounded-full bg-brandOrange transition-all duration-300 transform scale-125 focus:outline-none";
+            } else {
+                dot.className = "carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 focus:outline-none";
+            }
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlideUI(currentSlide);
+        resetAutoTimer();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlideUI(currentSlide);
+    }
+
+    function resetAutoTimer() {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = setInterval(nextSlide, 5000);
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
-        const slides = document.querySelectorAll(".hero-slide");
-        let currentSlide = 0;
-        const intervalTime = 5000; // Change image every 5 seconds
-
-        function nextSlide() {
-            slides[currentSlide].classList.remove("opacity-100");
-            slides[currentSlide].classList.add("opacity-0");
-            
-            currentSlide = (currentSlide + 1) % slides.length;
-            
-            slides[currentSlide].classList.remove("opacity-0");
-            slides[currentSlide].classList.add("opacity-100");
-        }
-
+        slides = document.querySelectorAll(".hero-slide");
+        dots = document.querySelectorAll(".carousel-dot");
+        
         if (slides.length > 0) {
-            setInterval(nextSlide, intervalTime);
+            resetAutoTimer();
         }
     });
 </script>
-
 
 <!-- Brand Trust Marquee (Seamless Infinite Loop) -->
 <section class="py-12 bg-white border-b border-slate-200 overflow-hidden">
