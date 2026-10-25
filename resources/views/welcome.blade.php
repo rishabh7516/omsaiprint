@@ -39,7 +39,7 @@
         </div>
         <!-- Slide 3 -->
         <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="/images/machine-single-colors.jpg" alt="Om Sai Print Machine 3" class="w-full h-full object-cover object-center opacity-85">
+            <img src="/images/machine-single-color.jpg" alt="Om Sai Print Machine 3" class="w-full h-full object-cover object-center opacity-85">
         </div>
         <!-- Lightened Dark Overlay Gradient for High Machine Visibility -->
         <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-navy/30 z-10"></div>
