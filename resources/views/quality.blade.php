@@ -124,7 +124,7 @@
                         <span class="text-3xl font-extrabold text-brandOrange">06</span>
                     </div>
                     <div class="h-60 bg-white p-6 relative overflow-hidden flex items-center justify-center border-b border-slate-100">
-                        <img src="/images/100% Inline Leak Testing.jpg" alt="100% Inline Leak Testing" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="/images/Testing.jpg" alt="100% Inline Leak Testing" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-extrabold text-navy mb-3">100% Inline Leak Testing</h3>
