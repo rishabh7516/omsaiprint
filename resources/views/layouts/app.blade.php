@@ -264,7 +264,7 @@
         <!-- Bottom Copyright Row -->
         <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
             <p>&copy; {{ date('Y') }} Om Sai Print. All rights reserved.</p>
-            <p class="text-slate-500">Established 2002 &middot; Automatic Techno Robotics Silk-Screen Line</p>
+            <p class="text-slate-500">Established 2002 &middot; Om Sai Prints</p>
         </div>
 
     </div>
