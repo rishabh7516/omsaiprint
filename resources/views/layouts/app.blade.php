@@ -203,7 +203,7 @@
                 </p>
                 <div class="pt-2">
                     <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
-                        Techno Robotics Automatic Line
+                        Om Sai Prints
                     </span>
                 </div>
             </div>

@@ -2,19 +2,54 @@
 
 @section('content')
 
-<!-- Hero Section (Full-Bleed Background Image Layout) -->
+<style>
+
+    @keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+}
+
+/* Pause animation when user hovers over the brands */
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+</style>
+
+<!-- Hero Section (Full-Bleed Carousel Background Layout) -->
 <section id="home" class="relative min-h-[85vh] flex flex-col justify-between bg-navy text-white py-16 px-6 overflow-hidden">
-    <!-- Background Machine Image with Dark Overlay -->
-    <div class="absolute inset-0 z-0">
-        <img src="/images/hero-machine.jpg" alt="Om Sai Print Machine" class="w-full h-full object-cover object-center opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40"></div>
+    <!-- Carousel Background Images Container -->
+    <div id="hero-carousel" class="absolute inset-0 z-0">
+        <!-- Slide 1 -->
+        <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+            <img src="/images/machine-auto-line.jpg" alt="Om Sai Print Machine 1" class="w-full h-full object-cover object-center opacity-30">
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="/images/machine-leak-testing.jpg" alt="Om Sai Print Machine 2" class="w-full h-full object-cover object-center opacity-30">
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+            <img src="/images/machine-single-colors.jpg" alt="Om Sai Print Machine 3" class="w-full h-full object-cover object-center opacity-30">
+        </div>
+        <!-- Dark Overlay Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40 z-10"></div>
     </div>
 
     <!-- Main Content Grid -->
-    <div class="relative z-10 max-w-7xl mx-auto w-full my-auto py-8">
+    <div class="relative z-20 max-w-7xl mx-auto w-full my-auto py-8">
         <div class="max-w-3xl">
             <span class="text-xs sm:text-sm font-semibold tracking-widest text-brandOrange uppercase">
-                ESTABLISHED 2002 • TECHNO ROBOTICS AUTOMATIC LINE
+                ESTABLISHED 2002 • Om Sai Prints
             </span>
             
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mt-4 mb-6 leading-tight text-white">
@@ -40,7 +75,7 @@
     </div>
 
     <!-- Bottom Feature Badges -->
-    <div class="relative z-10 max-w-7xl mx-auto w-full pt-8 border-t border-slate-700/50">
+    <div class="relative z-20 max-w-7xl mx-auto w-full pt-8 border-t border-slate-700/50">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-300">
             <div class="hover:translate-y-[-2px] transition duration-200">
                 <span class="block font-bold text-white text-base sm:text-lg">20 ml – 1L</span>
@@ -61,6 +96,30 @@
         </div>
     </div>
 </section>
+
+<!-- Lightweight Carousel Controller Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".hero-slide");
+        let currentSlide = 0;
+        const intervalTime = 5000; // Change image every 5 seconds
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove("opacity-100");
+            slides[currentSlide].classList.add("opacity-0");
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            slides[currentSlide].classList.remove("opacity-0");
+            slides[currentSlide].classList.add("opacity-100");
+        }
+
+        if (slides.length > 0) {
+            setInterval(nextSlide, intervalTime);
+        }
+    });
+</script>
+
 
 <!-- Brand Trust Marquee (Seamless Infinite Loop) -->
 <section class="py-12 bg-white border-b border-slate-200 overflow-hidden">
@@ -138,14 +197,17 @@
     </div>
 </section>
 
-<!-- The Machine Section (With Image & Badge Hover Effects) -->
+<!-- The Machine Section (With Auto-playing Video & Badge Hover Effects) -->
 <section id="machine" class="py-24 bg-white px-6 border-t border-slate-200">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left Image Container with Hover zoom & badge lift -->
+        <!-- Left Video Container with Hover zoom & badge lift -->
         <div class="lg:col-span-5 relative group">
-            <div class="relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-md h-[520px] sm:h-[580px] w-full flex items-center justify-center text-slate-400">
-                <img src="/images/the-machine.jpg" alt="Techno Robotics Line" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+            <div class="relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-md h-[520px] sm:h-[580px] w-full flex items-center justify-center">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <source src="/videos/the-machine.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
 
             <!-- Overlapping Navy Badge "05" -->
@@ -164,7 +226,7 @@
             </h2>
             
             <p class="text-slate-500 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-                Our Techno Robotics line auto-loads bottles, activates the surface with online flame treatment, prints multi-colour artwork in register, cures instantly with synchronised IR + LED-UV, then leak-tests every unit inline.
+                Our Om Sai Prints auto-loads bottles, activates the surface with online flame treatment, prints multi-colour artwork in register, cures instantly with synchronised IR + LED-UV, then leak-tests every unit inline.
             </p>
             
             <a href="#quote" class="inline-flex items-center text-xs sm:text-sm font-bold text-navy border border-slate-300 rounded-full px-7 py-3 hover:bg-navy hover:text-white hover:border-navy transition-all duration-300 shadow-sm space-x-2">
