@@ -46,13 +46,37 @@
                 </a>
 
                 <!-- Email -->
-                <a href="mailto:ashokimp71@gmail.com" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 block group">
-                    <div class="text-brandOrange mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">EMAIL</span>
-                    <span class="text-xs font-extrabold text-navy break-all">ashokimp71@gmail.com</span>
-                </a>
+<!-- Email Contact Cards Grid (3 Emails) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    
+    <!-- Email 1: Owner -->
+    <a href="mailto:ashok@omsaiprint.com" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 block group">
+        <div class="text-brandOrange mb-4 transform group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">DIRECT / OWNER</span>
+        <span class="text-xs font-extrabold text-navy break-all">ashok@omsaiprint.com</span>
+    </a>
+
+    <!-- Email 2: Sales -->
+    <a href="mailto:sales@omsaiprint.com" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 block group">
+        <div class="text-brandOrange mb-4 transform group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">SALES & QUOTES</span>
+        <span class="text-xs font-extrabold text-navy break-all">sales@omsaiprint.com</span>
+    </a>
+
+    <!-- Email 3: Info -->
+    <a href="mailto:info@omsaiprint.com" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 block group">
+        <div class="text-brandOrange mb-4 transform group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">GENERAL INFO</span>
+        <span class="text-xs font-extrabold text-navy break-all">info@omsaiprint.com</span>
+    </a>
+
+</div>
 
                 <!-- Owner -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 block">
@@ -80,7 +104,7 @@
         </div>
 
         <!-- Right Column: Send Us a Message Form -->
-        <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+        <!-- <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
             <h2 class="text-2xl font-extrabold text-navy mb-6">Send us a message</h2>
             
             <form action="#" method="POST" class="space-y-6">
@@ -118,7 +142,7 @@
                     <span>Send Message</span>
                 </button>
             </form>
-        </div>
+        </div> -->
 
     </div>
 </section>

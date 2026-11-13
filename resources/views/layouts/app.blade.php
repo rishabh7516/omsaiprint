@@ -29,8 +29,8 @@
             
 <!-- Logo & Brand Name -->
 <a href="{{ url('/') }}" class="flex items-center space-x-3">
-    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden border border-slate-200">
-        <img src="/images/logo.jpg" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden border border-slate-200">
+        <img src="/images/logo.png" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
     </div>
     <div>
         <span class="font-black text-lg text-navy tracking-wide block leading-none">OM SAI PRINT</span>
@@ -194,8 +194,8 @@
 <!-- Column 1: Brand Info -->
 <div class="lg:col-span-4 space-y-4">
     <div class="flex items-center space-x-3">
-        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden border border-slate-700/50 shadow-sm">
-            <img src="/images/logo.jpg" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden border border-slate-700/50 shadow-sm">
+            <img src="/images/logo.png" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
         </div>
         <span class="font-extrabold text-lg text-white tracking-wide">OM SAI PRINT</span>
     </div>
@@ -210,18 +210,32 @@
 </div>
 
             <!-- Column 2: Navigation Links -->
-            <div class="lg:col-span-3 space-y-3">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">EXPLORE</h3>
-                <ul class="space-y-2 text-xs font-medium text-slate-300">
-                    <li><a href="{{ url('/') }}" class="hover:text-white transition">Home</a></li>
-                    <li><a href="{{ url('/the-machine') }}" class="hover:text-white transition">The Machine</a></li>
-                    <li><a href="{{ url('/gallery') }}" class="hover:text-white transition">Gallery</a></li>
-                    <li><a href="{{ route('industries.index') }}" class="hover:text-white transition">Industries</a></li>
-                    <li><a href="{{ url('/quality') }}" class="hover:text-white transition">Quality</a></li>
-                    <li><a href="{{ url('/about') }}" class="hover:text-white transition">About Us</a></li>
-                    <li><a href="{{ url('/contact') }}" class="hover:text-white transition">Contact Us</a></li>
-                </ul>
-            </div>
+<div class="lg:col-span-3 space-y-3">
+    <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">EXPLORE</h3>
+    <ul class="space-y-2 text-xs font-medium">
+        <li>
+            <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Home</a>
+        </li>
+        <li>
+            <a href="{{ url('/the-machine') }}" class="{{ request()->is('the-machine') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">The Machine</a>
+        </li>
+        <li>
+            <a href="{{ url('/gallery') }}" class="{{ request()->is('gallery') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Gallery</a>
+        </li>
+        <li>
+            <a href="{{ route('industries.index') }}" class="{{ request()->is('industries*') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Industries</a>
+        </li>
+        <li>
+            <a href="{{ url('/quality') }}" class="{{ request()->is('quality') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Quality</a>
+        </li>
+        <li>
+            <a href="{{ url('/about') }}" class="{{ request()->is('about') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">About Us</a>
+        </li>
+        <li>
+            <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Contact Us</a>
+        </li>
+    </ul>
+</div>
 
             <!-- Column 3: Direct Contact Details -->
             <div class="lg:col-span-3 space-y-3">
@@ -247,18 +261,16 @@
             </div>
 
             <!-- Column 4: Quick Action -->
-            <div class="lg:col-span-2 space-y-3">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">GET STARTED</h3>
-                <p class="text-xs text-slate-300 leading-relaxed">
-                    Configure your bottle parameters and request a custom quote.
-                </p>
-                <div class="pt-1">
-<a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%20(ml%2FL)%3A%20%0A-%20Bottle%20Shape%20(Round%2FFlat%2FOval)%3A%20%0A-%20Material%20(HDPE%2FPET%2FPP)%3A%20%0A-%20Number%20of%20Print%20Colours%3A%20%0A-%20Estimated%20Order%20Quantity%3A%20%0A%0AThank%20you." class="bg-brandOrange hover:opacity-90 text-white px-6 py-3.5 rounded-full font-semibold text-sm transition shadow-lg flex items-center justify-center space-x-2">
-    <span>Configure Your Bottle & Request a Quote</span>
-    <span>&rarr;</span>
-</a>
-                </div>
-            </div>
+<div class="lg:col-span-3 space-y-3">
+    <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">GET STARTED</h3>
+    <p class="text-xs text-slate-300 leading-relaxed">
+        Configure your bottle parameters and request a custom quote.
+    </p>
+    <a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%3A%20%0A-%20Shape%3A%20%0A-%20Quantity%3A%20" class="inline-flex items-center justify-center bg-brandOrange hover:opacity-90 text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md space-x-1">
+        <span>Configure Your Bottle & Request a Quote</span>
+        <span>&rarr;</span>
+    </a>
+</div>
 
         </div>
 
