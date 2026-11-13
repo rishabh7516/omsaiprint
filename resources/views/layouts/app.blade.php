@@ -172,9 +172,10 @@
         </a>
 
         <div class="pt-2">
-            <a href="{{ url('/#contact') }}" class="block text-center bg-brandOrange text-white text-sm font-bold py-3 rounded-xl shadow-md">
-                Request a Quote
-            </a>
+<a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%20(ml%2FL)%3A%20%0A-%20Bottle%20Shape%20(Round%2FFlat%2FOval)%3A%20%0A-%20Material%20(HDPE%2FPET%2FPP)%3A%20%0A-%20Number%20of%20Print%20Colours%3A%20%0A-%20Estimated%20Order%20Quantity%3A%20%0A%0AThank%20you." class="bg-brandOrange hover:opacity-90 text-white px-6 py-3.5 rounded-full font-semibold text-sm transition shadow-lg flex items-center justify-center space-x-2">
+    <span>Configure Your Bottle & Request a Quote</span>
+    <span>&rarr;</span>
+</a>
         </div>
     </div>
 </header>
@@ -203,7 +204,7 @@
     </p>
     <div class="pt-2">
         <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
-            Om Sai Prints
+            Om Sai Print
         </span>
     </div>
 </div>
@@ -252,10 +253,10 @@
                     Configure your bottle parameters and request a custom quote.
                 </p>
                 <div class="pt-1">
-                    <a href="{{ url('/#contact') }}" class="inline-flex items-center justify-center bg-brandOrange hover:opacity-90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition shadow-md space-x-1">
-                        <span>Request a Quote</span>
-                        <span>&rarr;</span>
-                    </a>
+<a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%20(ml%2FL)%3A%20%0A-%20Bottle%20Shape%20(Round%2FFlat%2FOval)%3A%20%0A-%20Material%20(HDPE%2FPET%2FPP)%3A%20%0A-%20Number%20of%20Print%20Colours%3A%20%0A-%20Estimated%20Order%20Quantity%3A%20%0A%0AThank%20you." class="bg-brandOrange hover:opacity-90 text-white px-6 py-3.5 rounded-full font-semibold text-sm transition shadow-lg flex items-center justify-center space-x-2">
+    <span>Configure Your Bottle & Request a Quote</span>
+    <span>&rarr;</span>
+</a>
                 </div>
             </div>
 
@@ -264,7 +265,7 @@
         <!-- Bottom Copyright Row -->
         <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
             <p>&copy; {{ date('Y') }} Om Sai Print. All rights reserved.</p>
-            <p class="text-slate-500">Established 2002 &middot; Om Sai Prints</p>
+            <p class="text-slate-500">Established 2002 &middot; Om Sai Print</p>
         </div>
 
     </div>

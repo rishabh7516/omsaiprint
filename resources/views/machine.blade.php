@@ -106,10 +106,10 @@
         </p>
 
         <div class="flex justify-center space-x-4">
-            <a href="{{ url('/#contact') }}" class="bg-brandOrange hover:opacity-90 text-white px-6 py-3 rounded-full text-xs font-semibold transition flex items-center space-x-2 shadow-md">
-                <span>Request a Quote</span>
-                <span>&rarr;</span>
-            </a>
+<a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%20(ml%2FL)%3A%20%0A-%20Bottle%20Shape%20(Round%2FFlat%2FOval)%3A%20%0A-%20Material%20(HDPE%2FPET%2FPP)%3A%20%0A-%20Number%20of%20Print%20Colours%3A%20%0A-%20Estimated%20Order%20Quantity%3A%20%0A%0AThank%20you." class="bg-brandOrange hover:opacity-90 text-white px-6 py-3.5 rounded-full font-semibold text-sm transition shadow-lg flex items-center justify-center space-x-2">
+    <span>Configure Your Bottle & Request a Quote</span>
+    <span>&rarr;</span>
+</a>
             <a href="https://wa.me/919823086791?text=Hi%20Om%20Sai%20Print%2C%20I%20would%20like%20a%20quote%20for%20bottle%20printing." target="_blank" class="bg-transparent hover:bg-white/10 text-white px-6 py-3 rounded-full text-xs font-semibold border border-slate-400 transition flex items-center space-x-2">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                 <span>WhatsApp</span>

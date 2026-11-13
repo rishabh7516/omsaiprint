@@ -37,10 +37,10 @@
 
                 <!-- Button -->
                 <div class="pt-4">
-                    <a href="{{ url('/#contact') }}" class="inline-flex items-center justify-center bg-brandOrange hover:opacity-90 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-md transition space-x-2">
-                        <span>Request a Quote</span>
-                        <span>&rarr;</span>
-                    </a>
+<a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%20(ml%2FL)%3A%20%0A-%20Bottle%20Shape%20(Round%2FFlat%2FOval)%3A%20%0A-%20Material%20(HDPE%2FPET%2FPP)%3A%20%0A-%20Number%20of%20Print%20Colours%3A%20%0A-%20Estimated%20Order%20Quantity%3A%20%0A%0AThank%20you." class="bg-brandOrange hover:opacity-90 text-white px-6 py-3.5 rounded-full font-semibold text-sm transition shadow-lg flex items-center justify-center space-x-2">
+    <span>Configure Your Bottle & Request a Quote</span>
+    <span>&rarr;</span>
+</a>
                 </div>
 
             </div>
