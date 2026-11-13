@@ -191,56 +191,59 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-slate-800/80">
             
-<!-- Column 1: Brand Info -->
-<div class="lg:col-span-4 space-y-4">
-    <div class="flex items-center space-x-3">
-<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden border border-slate-700/50 shadow-sm">
-            <img src="/images/logo.png" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1">
-        </div>
-        <span class="font-extrabold text-lg text-white tracking-wide">OM SAI PRINT</span>
-    </div>
-    <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
-        The fully automatic silk-screen printing partner for bottle manufacturers and brands. Decorating plastic bottles with precision since 2002.
-    </p>
-    <div class="pt-2">
-        <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
-            Om Sai Print
-        </span>
-    </div>
-</div>
+            <!-- Column 1: Brand Info -->
+            <div class="lg:col-span-4 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden border border-slate-700/50 shadow-sm shrink-0">
+                        <img src="/images/logo.png" alt="Om Sai Print Logo" class="w-full h-full object-contain p-1.5">
+                    </div>
+                    <div>
+                        <span class="font-black text-lg text-white tracking-wide block leading-none">OM SAI PRINT</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mt-1">Silk-Screen Bottle Printing</span>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+                    The fully automatic silk-screen printing partner for bottle manufacturers and brands. Decorating plastic bottles with precision since 2002.
+                </p>
+                <div class="pt-1">
+                    <span class="inline-flex items-center text-[11px] font-semibold text-brandOrange bg-brandOrange/10 border border-brandOrange/20 px-3 py-1 rounded-full">
+                        Om Sai Print
+                    </span>
+                </div>
+            </div>
 
             <!-- Column 2: Navigation Links -->
-<div class="lg:col-span-3 space-y-3">
-    <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">EXPLORE</h3>
-    <ul class="space-y-2 text-xs font-medium">
-        <li>
-            <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Home</a>
-        </li>
-        <li>
-            <a href="{{ url('/the-machine') }}" class="{{ request()->is('the-machine') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">The Machine</a>
-        </li>
-        <li>
-            <a href="{{ url('/gallery') }}" class="{{ request()->is('gallery') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Gallery</a>
-        </li>
-        <li>
-            <a href="{{ route('industries.index') }}" class="{{ request()->is('industries*') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Industries</a>
-        </li>
-        <li>
-            <a href="{{ url('/quality') }}" class="{{ request()->is('quality') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Quality</a>
-        </li>
-        <li>
-            <a href="{{ url('/about') }}" class="{{ request()->is('about') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">About Us</a>
-        </li>
-        <li>
-            <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Contact Us</a>
-        </li>
-    </ul>
-</div>
+            <div class="lg:col-span-2 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">EXPLORE</h3>
+                <ul class="space-y-2 text-xs font-medium">
+                    <li>
+                        <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/the-machine') }}" class="{{ request()->is('the-machine') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">The Machine</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/gallery') }}" class="{{ request()->is('gallery') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('industries.index') }}" class="{{ request()->is('industries*') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Industries</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/quality') }}" class="{{ request()->is('quality') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Quality</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/about') }}" class="{{ request()->is('about') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">About Us</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'text-brandOrange font-bold' : 'text-slate-300 hover:text-white' }} transition">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Column 3: Direct Contact Details -->
             <div class="lg:col-span-3 space-y-3">
                 <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">CONTACT</h3>
-                <div class="text-xs space-y-2 text-slate-300 leading-relaxed">
+                <div class="text-xs space-y-2.5 text-slate-300 leading-relaxed">
                     <p class="text-white font-semibold">Ashok Singh <span class="text-slate-400 font-normal">(Owner)</span></p>
                     <p>
                         <a href="tel:+919823086791" class="hover:text-brandOrange transition flex items-center space-x-2">
@@ -248,8 +251,8 @@
                         </a>
                     </p>
                     <p>
-                        <a href="mailto:ashokimp71@gmail.com" class="hover:text-brandOrange transition flex items-center space-x-2">
-                            <span>✉️ ashokimp71@gmail.com</span>
+                        <a href="mailto:ashok@omsaiprint.com" class="hover:text-brandOrange transition flex items-center space-x-1.5 break-all">
+                            <span>✉️ ashok@omsaiprint.com</span>
                         </a>
                     </p>
                     <p>
@@ -261,16 +264,16 @@
             </div>
 
             <!-- Column 4: Quick Action -->
-<div class="lg:col-span-3 space-y-3">
-    <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">GET STARTED</h3>
-    <p class="text-xs text-slate-300 leading-relaxed">
-        Configure your bottle parameters and request a custom quote.
-    </p>
-    <a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%3A%20%0A-%20Shape%3A%20%0A-%20Quantity%3A%20" class="inline-flex items-center justify-center bg-brandOrange hover:opacity-90 text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md space-x-1">
-        <span>Configure Your Bottle & Request a Quote</span>
-        <span>&rarr;</span>
-    </a>
-</div>
+            <div class="lg:col-span-3 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brandOrange">GET STARTED</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Configure your bottle parameters and request a custom quote.
+                </p>
+                <a href="mailto:ashok@omsaiprint.com?subject=Quote%20Request%20-%20Bottle%20Silk-Screen%20Printing&body=Hi%20Om%20Sai%20Print%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20bottle%20printing.%20Here%20are%20my%20requirements%3A%0A-%20Bottle%20Capacity%3A%20%0A-%20Shape%3A%20%0A-%20Quantity%3A%20" class="inline-flex items-center justify-center bg-brandOrange hover:opacity-90 text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md space-x-1 text-center">
+                    <span>Configure Your Bottle & Request a Quote</span>
+                    <span>&rarr;</span>
+                </a>
+            </div>
 
         </div>
 
